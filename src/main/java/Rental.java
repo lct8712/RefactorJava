@@ -17,4 +17,14 @@ public class Rental {
     public int getDaysRented() {
         return daysRented;
     }
+
+    double getAmount() {
+        return movie.getCharge(this.getDaysRented());
+    }
+
+    int getPoint() {
+        // add bonus for a two day new release rental
+        return movie.getPoint(this.getDaysRented());
+    }
+
 }
